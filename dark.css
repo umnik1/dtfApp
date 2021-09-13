@@ -1,0 +1,325 @@
+.sidebar__footer.l-ph-20.lm-ph-15, .booster-promo, .booster-promo__button, .booster-promo__hide, .booster-promo__unit,
+.vacancies_widget, .sidebar-tree-list-item__custom-html-wrapper, .kinopoisk-header-branding, .kinopoisk-branding-footer,
+.dstr-fl__outer, .sidebar-tree-list-item:nth-of-type(4) {
+    display: none !important;
+}
+
+#appPanel, .sidebar, .layout__left-column, .site-header {
+  background-color: #212226 !important;
+  color: #FFF !important;
+}
+
+.block-hidden, .mini-editor, .new_entries, .l-island-bg, .block-incut, .block-quote--centered, .block-quote--default,
+.island--blogs_entries {
+  background-color: #212226 !important;
+}
+
+.l-entry {
+  background: #303236 !important;
+}
+
+.sidebar-tree-list-item--active, .sidebar-tree-list__show-more-button, .search__field, .v-split-button__main,
+.ui-rounded-button__link:hover {
+  background: #303236 !important;
+  color: #FFF !important;
+}
+.news_widget, .layout__right-column, .content-feed, .ui-rounded-button--active .ui-rounded-button__link,
+.content-image--with_background {
+  background-color: #36393f !important;
+}
+
+.ui-rounded-button__link {
+  font-size: 14px !important;
+  border-radius: 5px !important;
+}
+
+.comments_counter, .news_item .time, .news_widget__toggle, .content-header-number, .content-header-repost, .repost_button__button,
+.v-shares__button, .icon--v_arrow_down, .icon--v_arrow_up, .comments__item__date, .comments__item__replied_to, .comments__item__reply,
+.u-notification__content__date {
+  color: #898c90 !important;
+}
+
+.favorite_marker .icon {
+  fill: #898c90 !important;
+}
+
+.new-entries-horizon {
+  color: #dcddde !important;
+}
+
+.andropov_link, .andropov_link--with_image {
+  border: 0px !important;
+  border-width: 0px !important;
+  color: #dcddde !important;
+  background: #212226;
+  -webkit-text-fill-color: #dcddde;
+}
+
+.andropov_link__host {
+  color: #fff !important;
+}
+
+.comments__item__children {
+  border-left: 1px solid #dedede6b !important;
+}
+
+body {
+  background-color: #303136 !important;
+  color: #dcddde !important;
+}
+
+.block-person a, .block-quote a, .block-warning a, .comments__item__text a, .content figcaption a, .content h2 a, .content h3 a, .content h4 a, .content ol a, .content p a, .content ul a, .content-description a, .page--error .error__message a, .profile_comment_favorite__text a, .profile_comment_self__text a, .sitemap a, .subsite_card_simple__description a, .subsite_head__description a, .t-link-classic {
+  color: #23a4d7 !important;
+  border-bottom: 1px solid #249fd0 !important;
+}
+
+.layout__right-column div div div div div span {
+  color: #fff !important;
+}
+
+.layout__right-column div div div div div div {
+  font-size: 13px !important;
+}
+
+body::-webkit-scrollbar {
+  background-color: #36393f;
+  width: 10px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+  background-color: #36393f;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+  background-color: #212226;
+  height: 80px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+  display:none;
+}
+
+body {
+  padding-top: 20px !important;
+  /* background-color:darkviolet !important; */
+}
+
+#appPanel {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    color: #FFF;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+#appFull, #appClose, #appMinimize, #appBack {
+  font-size: 12pt;
+  font-weight: 100;
+  position: absolute;
+  top: 1px;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+#appFull {
+  right: 25px;
+}
+
+#appClose {
+  right: 2px;
+}
+
+#appBack {
+  left: 5px;
+  font-size: 25px !important;
+  top: 4px;
+}
+
+#appMinimize {
+  right: 48px;
+}
+
+.layout__left-column {
+    padding-top: 10px;
+}
+
+.main {
+    padding-top: 54px;
+}
+
+.site-header {
+    position: fixed !important;
+    margin-top: 20px;
+}
+
+.sidebar-tree-list-item__name {
+  display: none;
+}
+
+.sidebar-tree-list-item__image, .sidebar-tree-list-item__image img {
+  width: 40px !important;
+  height:40px !important;
+}
+
+.sidebar-tree-list-item__link svg {
+  width: 35px !important;
+  height: 35px !important;
+  color: #FFF !important;
+  margin-left: 3px !important;
+}
+
+.app--content-feed.app--left-column-on.app--right-column-on .layout__left-column, .app--content-full.app--left-column-on .layout__left-column,
+.layout__left-column.layout__sticky {
+  width: 80px !important;
+}
+
+.sidebar-tree-list-item__badge {
+  position: sticky !important;
+  right: 15px !important;
+}
+
+.sidebar-tree-list-item, .sidebar-tree-list-item--active {
+  width: 60px;
+}
+
+.sidebar-tree-list-item__link, .sidebar-tree-list-item--custom-html {
+  padding: 0 10px !important;
+}
+
+.sidebar-tree-list-item__link .icon.icon--ui_pin_stroked {
+  width: 16px !important;
+  position: absolute !important;
+  left: -12px !important;
+  z-index: 99999 !important;
+}
+
+.sidebar-tree-list-item__favourite {
+  position: sticky;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.sidebar-tree-list__show-more-button .icon.icon--ui_arrow_down, .sidebar-tree-list__show-more-button .icon.icon--ui_arrow_up {
+  display: none;
+}
+
+.sidebar-tree-list__show-more-button {
+  color: #fff !important;
+  padding: 0;
+  font-size: x-small !important;
+  text-align: center !important;
+  display: block !important;
+  margin-top: 10px !important;
+  padding: 0 !important;
+  padding-top: 15px !important;
+  border-radius: 8px 8px 8px 8px !important;
+}
+
+.v-text-input__input::placeholder {
+  color: #FFF !important;
+}
+
+.search__field .v-field:not(.v-field--focused) .v-field__wrapper:not(:hover) .v-field__icon {
+  color: #FFF !important;
+}
+
+.site-header__item .v-split-button .v-split-button__select {
+  display: none !important;
+}
+
+.app--content-feed.app--left-column-on.app--right-column-on #page_wrapper {
+  width: 770px !important;
+}
+
+.layout__right-column {
+  width: 300px !important;
+}
+
+.layout__right-column div div div div div div{
+  margin-left: 0px !important;
+}
+
+.ui-border--bottom {
+  border-bottom: 0px solid #f2f2f2 !important;
+}
+
+.ui-tab--active .ui-tab__label {
+  color: #fff !important;
+}
+
+.vote--comment.vote--sum-positive .vote__value {
+  background-color: rgba(69,192,69,.1) !important;
+}
+
+.vote--comment.vote--sum-negative .vote__value {
+  background-color: rgb(185 44 44 / 10%) !important;
+}
+
+.comments_form {
+  color: #000 !important;
+}
+
+.comments__item__self--author .comments__item__user__name .user_name {
+  background-color: #36393f !important;
+}
+
+.comments__item__space--pinned, .comments__item__space--new, .comments__item__space--highlighted {
+  background-color: #303236 !important;
+}
+
+.widget_wrapper--type-blue {
+  background-color: #212226 !important;
+}
+
+.editor {
+  background-color: #FFF !important;
+  color: #000 !important;
+}
+
+.v-list-tab--active {
+  background-color: #4683d9 !important;
+}
+
+.v-tabs--overflown::after, .v-tabs--overflown::before {
+  background-image: none !important;
+}
+
+.v-tabs-navigation {
+  background-color: #36393f !important;
+}
+
+.u-notification--unread {
+  background: #4f545c !important;
+}
+
+.u-notification--border, .head-notifies__header {
+  border-bottom: 0px solid #f2f2f2 !important;
+}
+
+.head-notifies__footer {
+  border-top: 0px solid #f2f2f2 !important;
+}
+
+.head-notifies__panel {
+  background: #303136 !important;
+  color: #f5fcff !important;
+}
+
+.u-notification--unread.u-notification--hover:hover {
+  background: #212226 !important;
+}
+
+.u-notification--hover:hover {
+  background: #212226 !important;
+}
+
+.andropov_telegram, .andropov_tweet {
+  background-color: #212226 !important;
+  border: 0px solid #dedede !important;
+}
