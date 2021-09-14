@@ -10,11 +10,11 @@
 }
 
 .block-hidden, .mini-editor, .new_entries, .l-island-bg, .block-incut, .block-quote--centered, .block-quote--default,
-.island--blogs_entries {
+.island--blogs_entries, .comments__item__expand, .comments__item__more--inner {
   background-color: #212226 !important;
 }
 
-.l-entry {
+.l-entry, .updown:after {
   background: #303236 !important;
 }
 
@@ -24,7 +24,8 @@
   color: #FFF !important;
 }
 .news_widget, .layout__right-column, .content-feed, .ui-rounded-button--active .ui-rounded-button__link,
-.content-image--with_background {
+.content-image--with_background, .comments__item__more--root, .comments__item__more--root--5, .ui-button--5,
+.notification, .v-popup-window__content {
   background-color: #36393f !important;
 }
 
@@ -322,4 +323,26 @@ body {
 .andropov_telegram, .andropov_tweet {
   background-color: #212226 !important;
   border: 0px solid #dedede !important;
+}
+
+.layout__right-column > div > div > div:first-of-type {
+  display: none !important;
+}
+
+.messenger {
+  background: transparent !important;
+}
+
+.aside-search input {
+  color: #000 !important;
+  background: #303136 !;
+}
+
+.aside__list-heading {
+  background: #303136 !important;
+}
+
+.chat-form__textarea {
+  background: #303136 !important;
+  color: #FFF !important;
 }

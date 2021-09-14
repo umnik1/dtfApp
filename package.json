@@ -1,5 +1,5 @@
 {
-    "name": "dtfApp",
+    "name": "dtfapp",
     "version": "1.0.0",
     "description": "DTF Windows Client",
     "main": "main.js",
@@ -12,8 +12,8 @@
     },
     "scripts": {
         "start": "electron .",
-        "build": "electron-packager . dtfApp --platform win32 --arch x64 --out dist/ --icon=./icon.ico",
-        "setup": "electron-installer-windows --src dist/dtfApp-win32-x64/ --dest dist/installers/ --icon=./icon.ico"
+        "build": "electron-packager . dtfApp --platform win32 --arch x64 --out dist/ --icon=./icon.png",
+        "setup": "electron-installer-windows --src dist/dtfApp-win32-x64/ --dest dist/installers/ --icon=./icon.png"
     },
     "dependencies": {
         "@cliqz/adblocker-electron": "^1.22.5",

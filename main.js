@@ -1,10 +1,24 @@
-const { app, BrowserWindow, getCurrentWindow, globalShortcut, remote, ipcMain, nativeImage } = require('electron');
+const {
+  app,
+  BrowserWindow,
+  getCurrentWindow,
+  globalShortcut,
+  remote,
+  ipcMain,
+  nativeImage
+} = require('electron');
 const path = require('path');
 const BadgeGenerator = require('./badge_generator.js');
 
-const { ElectronBlocker, fullLists } = require('@cliqz/adblocker-electron');
+const {
+  ElectronBlocker,
+  fullLists
+} = require('@cliqz/adblocker-electron');
 const fetch = require('cross-fetch');
-const { readFileSync, writeFileSync } = require('fs');
+const {
+  readFileSync,
+  writeFileSync
+} = require('fs');
 const contextMenu = require('electron-context-menu');
 
 contextMenu({
@@ -15,7 +29,10 @@ contextMenu({
 let mainWindow;
 let subWindow;
 const badgeDescription = 'New notification';
-let currentOverlayIcon = { image: null, badgeDescription };
+let currentOverlayIcon = {
+  image: null,
+  badgeDescription
+};
 
 const jsCode = `
 var body = document.querySelector("body");
@@ -104,16 +121,14 @@ async function createWindow() {
     frame: false,
     backgroundColor: '#212226',
     title: 'DTF',
-    icon: __dirname + '/icon.ico',
+    icon: __dirname + '/icon.png',
   });
 
   const blocker = await ElectronBlocker.fromLists(
     fetch,
-    fullLists,
-    {
+    fullLists, {
       enableCompression: true,
-    },
-    {
+    }, {
       path: 'engine.bin',
       read: async (...args) => readFileSync(...args),
       write: async (...args) => writeFileSync(...args),
@@ -123,7 +138,7 @@ async function createWindow() {
 
   // new Badge(mainWindow);
   let generator = new BadgeGenerator(mainWindow);
-  
+
   ipcMain.on('update-badge', (event, arg) => {
     if (arg) {
       generator.generate(arg).then((base64) => {
@@ -142,16 +157,16 @@ async function createWindow() {
 
   mainWindow.loadURL('https://dtf.ru');
 
-  mainWindow.webContents.on('dom-ready', function() {
+  mainWindow.webContents.on('dom-ready', function () {
     mainWindow.webContents.insertCSS(readFileSync(path.join(__dirname, 'dark.css'), 'utf8'))
   });
 
-  mainWindow.webContents.on('dom-ready', function() {
+  mainWindow.webContents.on('dom-ready', function () {
     mainWindow.webContents.executeJavaScript(jsCode)
     mainWindow.webContents.executeJavaScript(jsBadge)
   });
 
-  mainWindow.webContents.on('new-window', function(e, url) {
+  mainWindow.webContents.on('new-window', function (e, url) {
     if (url.toLowerCase().indexOf("dtf.ru") === -1) {
       e.preventDefault();
       require('electron').shell.openExternal(url);
@@ -165,10 +180,10 @@ async function createWindow() {
     mainWindow = null;
   });
 
-  var reload = ()=>{
+  var reload = () => {
     mainWindow.reload()
   }
-  
+
   globalShortcut.register('F5', reload);
 
 }
@@ -188,11 +203,9 @@ async function createSubWindow(url) {
 
   const blocker = await ElectronBlocker.fromLists(
     fetch,
-    fullLists,
-    {
+    fullLists, {
       enableCompression: true,
-    },
-    {
+    }, {
       path: 'engine.bin',
       read: async (...args) => readFileSync(...args),
       write: async (...args) => writeFileSync(...args),
@@ -202,15 +215,15 @@ async function createSubWindow(url) {
 
   subWindow.loadURL(url);
 
-  subWindow.webContents.on('dom-ready', function() {
+  subWindow.webContents.on('dom-ready', function () {
     subWindow.webContents.insertCSS(readFileSync(path.join(__dirname, 'dark.css'), 'utf8'))
   });
 
-  subWindow.webContents.on('dom-ready', function() {
+  subWindow.webContents.on('dom-ready', function () {
     subWindow.webContents.executeJavaScript(jsCode)
   });
 
-  subWindow.webContents.on('new-window', function(e, url) {
+  subWindow.webContents.on('new-window', function (e, url) {
     if (url.toLowerCase().indexOf("dtf.ru") === -1) {
       e.preventDefault();
       require('electron').shell.openExternal(url);
@@ -227,9 +240,9 @@ async function createSubWindow(url) {
 }
 
 app.whenReady().then(() => {
-    createWindow()
-  
-    app.on('activate', function () {
-      if (BrowserWindow.getAllWindows().length === 0) createWindow()
-    })
+  createWindow()
+
+  app.on('activate', function () {
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
+})
