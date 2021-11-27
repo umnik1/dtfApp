@@ -181,7 +181,7 @@ body {
 }
 
 .sidebar-tree-list-item__badge {
-  position: sticky !important;
+  position: absolute !important;
   right: 15px !important;
 }
 
@@ -345,4 +345,34 @@ body {
 .chat-form__textarea {
   background: #303136 !important;
   color: #FFF !important;
+}
+
+.comment__children>.comment:not(.comment--level-last):last-child {
+  -webkit-box-shadow: calc(var(--offset-branch)*-1 - 1px) 0 0 0 #212226 !important;
+  box-shadow: calc(var(--offset-branch)*-1 - 1px) 0 0 0 #212226 !important;
+}
+
+.comment__children {
+  -webkit-box-shadow: inset var(--width-branch) 0 0 0 #2e2f33 !important;
+  box-shadow: inset var(--width-branch) 0 0 0 #2e2f33 !important;
+}
+
+.comment__arc::after {
+  -webkit-box-shadow: inset 0 0 0 var(--stroke-width) #2e2f33 !important;
+    box-shadow: inset 0 0 0 var(--stroke-width) #2e2f33 !important;
+}
+
+.comment__self--author .comment-user__name {
+  background-color: #2e2f33 !important;
+  padding: 0 5px 0 5px;
+}
+
+.notify-new-items-label {
+  background: #2e2f33 !important;
+}
+
+.comment__space--highlighted::before, .comment__space--new::before {
+  background-color: #303236 !important;
+  -webkit-box-shadow: 0 0 0 4px #303236 !important;
+  box-shadow: 0 0 0 4px #303236 !important;
 }
