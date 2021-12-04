@@ -5,6 +5,7 @@ const {
   globalShortcut,
   remote,
   ipcMain,
+  session,
   nativeImage
 } = require('electron');
 const path = require('path');
@@ -109,6 +110,7 @@ const jsBadge = `
 `;
 
 async function createWindow() {
+  session.defaultSession.loadExtension(__dirname + '/ext/DTFhd');
   mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
@@ -154,8 +156,8 @@ async function createWindow() {
     }
     event.returnValue = "success"
   })
-
   mainWindow.loadURL('https://dtf.ru');
+  // mainWindow.webContents.openDevTools(); // Debug
 
   mainWindow.webContents.on('dom-ready', function () {
     mainWindow.webContents.insertCSS(readFileSync(path.join(__dirname, 'dark.css'), 'utf8'))
