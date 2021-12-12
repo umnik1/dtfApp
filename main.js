@@ -117,6 +117,7 @@ async function createWindow() {
       contextIsolation: false,
       nodeIntegrationInSubFrames: true,
       enableRemoteModule: true,
+      preload: path.join(__dirname, '/ext/counters.js'),
     },
     height: 800,
     width: 1250,

@@ -376,3 +376,7 @@ body {
   -webkit-box-shadow: 0 0 0 4px #303236 !important;
   box-shadow: 0 0 0 4px #303236 !important;
 }
+
+.quiz {
+  background-color: #212226 !important;
+}
