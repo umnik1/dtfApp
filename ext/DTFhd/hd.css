@@ -1,4 +1,4 @@
-.andropov_image__inner {
+.content-image {
   position: relative;
 }
 
@@ -13,6 +13,12 @@
   display: none;
 }
 
-.andropov_image__inner:hover .download_image {
+.content-image:hover .download_image {
   display: block;
+}
+
+.v-download {
+  color: #595959;
+  cursor: pointer;
+  overflow: hidden;
 }

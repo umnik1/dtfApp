@@ -13,13 +13,14 @@
     "scripts": {
         "start": "electron .",
         "build": "electron-packager . dtfApp --platform win32 --arch x64 --out dist/ --icon=./icon.png",
-        "setup": "electron-installer-windows --src dist/dtfApp-win32-x64/ --dest dist/installers/ --icon=./icon.png"
+        "setup": "electron-installer-windows --src dist/dtfApp-win32-x64/ --dest dist/installers/ --icon=./icon.ico"
     },
     "dependencies": {
         "@cliqz/adblocker-electron": "^1.22.5",
         "@electron/remote": "^1.2.1",
         "axios": "^0.21.1",
         "cross-fetch": "^3.1.4",
-        "electron-context-menu": "^3.1.1"
+        "electron-context-menu": "^3.1.1",
+        "jquery": "^3.6.1"
     }
 }

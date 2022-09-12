@@ -118,14 +118,18 @@ async function createWindow() {
       nodeIntegrationInSubFrames: true,
       enableRemoteModule: true,
       preload: path.join(__dirname, '/ext/counters.js'),
+      preload: path.join(__dirname, '/ext/codes.js'),
     },
     height: 800,
-    width: 1250,
+    width: 1450,
     frame: false,
     backgroundColor: '#212226',
     title: 'DTF',
     icon: __dirname + '/icon.png',
   });
+
+  let $ = require('jquery');
+  mainWindow.$ = $;
 
   const blocker = await ElectronBlocker.fromLists(
     fetch,
@@ -158,7 +162,8 @@ async function createWindow() {
     event.returnValue = "success"
   })
   mainWindow.loadURL('https://dtf.ru');
-  // mainWindow.webContents.openDevTools(); // Debug
+  // Раскомментить чтобы включить Debug
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.webContents.on('dom-ready', function () {
     mainWindow.webContents.insertCSS(readFileSync(path.join(__dirname, 'dark.css'), 'utf8'))
@@ -199,10 +204,14 @@ async function createSubWindow(url) {
       nodeIntegrationInSubFrames: true,
       enableRemoteModule: true,
     },
+    width: 1200,
     height: 700,
     frame: false,
     backgroundColor: '#212226',
   });
+
+  let $ = require('jquery');
+  subWindow.$ = $;
 
   const blocker = await ElectronBlocker.fromLists(
     fetch,
